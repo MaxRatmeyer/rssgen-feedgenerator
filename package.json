@@ -1,0 +1,19 @@
+{
+  "name": "rssgen-feedgenerator",
+  "version": "1.0.0",
+  "description": "Backend Feed Generator for RSSGen.com",
+  "main": "index.js",
+  "author": "MaxRatmeyer",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "xmldom": "^0.3.0"
+  },
+  "devDependencies": {
+    "serverless-domain-manager": "^5.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MaxRatmeyer/rssgen-feedgenerator"
+  }
+}

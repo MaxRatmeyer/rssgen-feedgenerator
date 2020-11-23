@@ -1,0 +1,28 @@
+service: rssgen-feedgenerator
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  memorySize: 512
+  stage: prod
+  region: us-east-1
+  endpointType: REGIONAL
+
+functions:
+  generate:
+    handler: src/generate.main
+    events:
+      - http:
+          path: /
+          method: GET
+
+plugins:
+  - serverless-domain-manager
+
+custom:
+  customDomain:
+    domainName: feed.rssgen.com
+    createRoute53Record: false
+    autoDomain: false
+    endpointType: 'regional'
+    stage: ${self:provider.stage}
