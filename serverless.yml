@@ -9,8 +9,8 @@ provider:
   endpointType: REGIONAL
 
 functions:
-  generate:
-    handler: src/generate.main
+  generateFeed:
+    handler: src/generateFeed.main
     events:
       - http:
           path: /
