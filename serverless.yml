@@ -15,6 +15,7 @@ functions:
       - http:
           path: /
           method: GET
+          cors: true
 
 plugins:
   - serverless-domain-manager
