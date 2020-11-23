@@ -3,7 +3,7 @@ service: rssgen-feedgenerator
 provider:
   name: aws
   runtime: nodejs12.x
-  memorySize: 512
+  memorySize: 1024
   stage: prod
   region: us-east-1
   endpointType: REGIONAL
